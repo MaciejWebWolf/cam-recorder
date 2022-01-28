@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <video class="main-video" autoplay muted controls></video>
+
+        <div class="buttons">
+          <div>
+            <button class="record-cam">Record camera</button>
+            <button class="record-screen-audio">Record Screen and audio</button>
+            <button class="stop">Stop!</button>
+          </div>
+          <div>
+            <button class="enable-preview">Enable Preview</button>
+            <button class="disable-preview">Disable Preview</button>
+          </div>
+        </div>
+
+        <div class="preview-wrapper">
+          <video class="preview-video" muted controls></video>
+        </div>
+
+        <div class="recorded-videos">
+          <h3>Recorded Videos</h3>
+        </div>
+      </div>
+      <div class="right">
+        <div class="uploaded-videos">
+          <h3>Videos in database</h3>
+          <form method="post" enctype="multipart/form-data" name="uploadForm">
+            Select file to upload:
+            <input type="file" name="video" id="fileToUpload" />
+            <input type="submit" value="Upload file" name="submit" />
+            <p class="results"></p>
+          </form>
+          <p class="uploaded-videos__results"></p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
